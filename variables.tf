@@ -35,7 +35,7 @@ variable "engine_version" {
 
 variable "instance_class" {
   type    = string
-  default = "db.t2"
+  default = "db.t3.small"
 }
 
 variable "db_name" {
