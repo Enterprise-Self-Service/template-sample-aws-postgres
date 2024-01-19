@@ -61,3 +61,8 @@ variable "db_parameter_group" {
   type    = string
   default = "postgres15"
 }
+
+variable "vpc_name" {
+  type    = string
+  default = "*"
+}

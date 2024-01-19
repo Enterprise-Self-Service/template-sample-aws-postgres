@@ -1,17 +1,17 @@
 data "aws_caller_identity" "current" {}
 data "aws_region" "current" {}
 
-data "aws_vpcs" "selected" {
+data "aws_vpcs" "main" {
   filter {
-    name   = "state"
-    values = ["available"]
+    name   = "tag:Name"
+    values = [var.vpc_name]
   }
 }
 
 data "aws_subnets" "all" {
   filter {
     name   = "vpc-id"
-    values = ["*"]
+    values = [local.vpc_id]
   }
 }
 
