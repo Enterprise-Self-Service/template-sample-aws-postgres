@@ -19,8 +19,8 @@ variable "max_allocated_storage" {
 }
 
 variable "iops" {
-  type    = number
-  default = 500
+  type    = string
+  default = 3000
 }
 
 variable "storage_encrypted" {
@@ -54,7 +54,7 @@ variable "backup_retention_period" {
 
 variable "monitoring_interval" {
   type    = string
-  default = 60
+  default = 0
 }
 
 variable "db_parameter_group" {
