@@ -19,7 +19,7 @@ variable "max_allocated_storage" {
 }
 
 variable "iops" {
-  type    = number
+  type    = string
   default = 3000
 }
 
