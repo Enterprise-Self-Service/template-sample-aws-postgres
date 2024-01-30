@@ -3,8 +3,10 @@ data "aws_region" "current" {}
 
 data "aws_vpcs" "main" {
   filter {
-    name   = "tag:Name"
-    values = [var.vpc_name]
+    name   = "state"
+    values = ["available"]
+    # name   = "tag:Name"
+    # values = [var.vpc_name]
   }
 }
 
